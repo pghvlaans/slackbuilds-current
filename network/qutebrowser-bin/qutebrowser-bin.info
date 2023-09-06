@@ -1,42 +1,46 @@
 PRGNAM="qutebrowser-bin"
-VERSION="2.5.4"
+VERSION="3.0.0"
 HOMEPAGE="https://qutebrowser.org"
 DOWNLOAD="UNSUPPORTED"
 MD5SUM=""
-DOWNLOAD_x86_64="https://github.com/qutebrowser/qutebrowser/archive/v2.5.4/qutebrowser-2.5.4.tar.gz \
-                 https://files.pythonhosted.org/packages/08/e3/57d4c24a050aa0bcca46b2920bff40847db79535dc78141eb83581a52eb8/pip-23.1.2-py3-none-any.whl \
-                 https://files.pythonhosted.org/packages/2f/8c/f336a966d4097c7cef6fc699b2ecb83b5fb63fd698198c1b5c7905a74f0f/setuptools-67.7.2-py3-none-any.whl \
-                 https://files.pythonhosted.org/packages/61/86/cc8d1ff2ca31a312a25a708c891cf9facbad4eae493b3872638db6785eb5/wheel-0.40.0-py3-none-any.whl \
-                 https://files.pythonhosted.org/packages/36/66/19983d471c702e551a19a7225a92a7c1efadd961f6c650110ed906dd0ed7/PyQt5-5.15.6-cp36-abi3-manylinux1_x86_64.whl \
-                 https://files.pythonhosted.org/packages/83/d4/241a6a518d0bcf0a9fcdcbad5edfed18d43e884317eab8d5230a2b27e206/PyQt5_Qt5-5.15.2-py3-none-manylinux2014_x86_64.whl \
-                 https://files.pythonhosted.org/packages/71/f7/52c15afe87e769a5892cbe3da8e38db6dee8fc58ce1fb6091dba975c6202/PyQt5_sip-12.9.1-cp39-cp39-manylinux1_x86_64.whl \
-                 https://files.pythonhosted.org/packages/a1/45/667e82a0f584be10d785213b04c8ce01ae4d2f63cd23ab6307312c69be89/PyQtWebEngine-5.15.5-cp36-abi3-manylinux1_x86_64.whl \
-                 https://files.pythonhosted.org/packages/48/62/117c9c96837287b181fce6da481065ddda68b3a8c0fa5f00ea62cc08b877/PyQtWebEngine_Qt5-5.15.2-py3-none-manylinux2014_x86_64.whl \
-                 https://files.pythonhosted.org/packages/27/2e/2d98eba665d3d70f4d0bc8e807bac660be0db66330e990978168c05a51a1/adblock-0.5.2-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.whl \
-                 https://files.pythonhosted.org/packages/44/98/5b86278fbbf250d239ae0ecb724f8572af1c91f4a11edf4d36a206189440/colorama-0.4.4-py2.py3-none-any.whl \
-                 https://files.pythonhosted.org/packages/76/02/af4045156cde8feeefa30cb1c051e10321d4960c418bd52346a497feb302/Jinja2-3.1.1-py3-none-any.whl \
-                 https://files.pythonhosted.org/packages/df/06/c515c5bc43b90462e753bc768e6798193c6520c9c7eb2054c7466779a9db/MarkupSafe-2.1.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl \
-                 https://files.pythonhosted.org/packages/1d/17/ed4d2df187995561b28f1073df24137cb750e12f9879d291cc8ab67c65d2/Pygments-2.11.2-py3-none-any.whl \
-                 https://files.pythonhosted.org/packages/12/fc/a4d5a7554e0067677823f7265cb3ae22aed8a238560b5133b58cda252dad/PyYAML-6.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl \
-                 https://files.pythonhosted.org/packages/52/c5/df7953fe6065185af5956265e3b16f13c2826c2b1ba23d43154f3af453bc/zipp-3.7.0-py3-none-any.whl \
-                 https://github.com/mozilla/pdf.js/releases/download/v3.6.172/pdfjs-3.6.172-legacy-dist.zip"
-MD5SUM_x86_64="6029496c6270924f937ae887005ff142 \
-               58deb0635a7d5f57ec2d516ad7c69dd5 \
-               a0f9300999be3afcd2c4abba2a9aa114 \
-               517d39f133bd7b1ff17caf09784b7543 \
-               0e637e2d6f117699f41ba163e6a0e73e \
-               038f56bd7af99133f591c7497b64ea17 \
-               022756b2a8744a111f622092ed36dee4 \
-               094f8349af070ad35255184061b6d62a \
-               d9fe06e7758913f32dc09324ff9abfdf \
-               d45a0ceee0df8ec1a6f62c4697355074 \
-               1dcd07acf2b1875ed09428e1ddf7e028 \
-               cae2986094602b6c2d6f4405e8d0eb3b \
-               68a29c49e695e11d59af9e33d7e4cfd4 \
-               9b19b40b048b2897d0af1b6af62f3799 \
-               aba0c6954cd00aaf39f3619a0bfce3ae \
-               fe228758662bbf708699fe52d0232b3b \
-               3280337e9a7d1f123b427b81063f7632"
-REQUIRES=""
+DOWNLOAD_x86_64="https://github.com/qutebrowser/qutebrowser/archive/v3.0.0/qutebrowser-3.0.0.tar.gz \
+                 https://files.pythonhosted.org/packages/50/c2/e06851e8cc28dcad7c155f4753da8833ac06a5c704c109313b8d5a62968a/pip-23.2.1-py3-none-any.whl \
+                 https://files.pythonhosted.org/packages/4f/ab/0bcfebdfc3bfa8554b2b2c97a555569c4c1ebc74ea288741ea8326c51906/setuptools-68.1.2-py3-none-any.whl \
+                 https://files.pythonhosted.org/packages/28/f5/6955d7b3a5d71ce6bac104f9cf98c1b0513ad656cdaca8ea7d579196f771/wheel-0.41.1-py3-none-any.whl \
+                 https://files.pythonhosted.org/packages/2f/0d/37432ce6e8434ecedc272621f09d08087bb8c00d26dace52e8c90efc2c72/PyQt6_WebEngine-6.5.0-cp37-abi3-manylinux_2_28_x86_64.whl \
+                 https://files.pythonhosted.org/packages/08/ae/24fac3a18cc809572dc83f9e609aae045b0c8d9158db06b4d84c4ff8fac7/PyQt6-6.5.2-cp37-abi3-manylinux_2_28_x86_64.whl \
+                 https://files.pythonhosted.org/packages/01/05/05a2bdeee76effa65360d9c28b0c82c5467ea68bde765a1a38b52195df4d/PyQt6_Qt6-6.5.2-py3-none-manylinux_2_28_x86_64.whl \
+                 https://files.pythonhosted.org/packages/10/92/92b0524a918bd79ae9378b956825768022dd01ed1752faa425d279cd4e93/PyQt6_sip-13.5.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl \
+                 https://files.pythonhosted.org/packages/89/5e/27eb0ed2a32478a9c9b9eb2afb0d8f29ac012096d2fc9f760ab4f249fb66/PyQt6_WebEngine_Qt6-6.5.2-py3-none-manylinux_2_28_x86_64.whl \
+                 https://files.pythonhosted.org/packages/06/26/39fad77ba6fe8bd5b1c5ebe411ea84a768075f40caa5400e889678de39b3/adblock-0.6.0-cp37-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.whl \
+                 https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl \
+                 https://files.pythonhosted.org/packages/bc/c3/f068337a370801f372f2f8f6bad74a5c140f6fda3d9de154052708dd3c65/Jinja2-3.1.2-py3-none-any.whl \
+                 https://files.pythonhosted.org/packages/de/63/cb7e71984e9159ec5f45b5e81e896c8bdd0e45fe3fc6ce02ab497f0d790e/MarkupSafe-2.1.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl \
+                 https://files.pythonhosted.org/packages/43/88/29adf0b44ba6ac85045e63734ae0997d3c58d8b1a91c914d240828d0d73d/Pygments-2.16.1-py3-none-any.whl \
+                 https://files.pythonhosted.org/packages/7d/39/472f2554a0f1e825bd7c5afc11c817cd7a2f3657460f7159f691fbb37c51/PyYAML-6.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl \
+                 https://files.pythonhosted.org/packages/8c/08/d3006317aefe25ea79d3b76c9650afabaf6d63d1c8443b236e7405447503/zipp-3.16.2-py3-none-any.whl \
+                 https://files.pythonhosted.org/packages/ff/1d/8f96eb0ce05f20e5d0722a3e910627a26a382c81f40c7292faa91545e43f/asciidoc-10.2.0-py2.py3-none-any.whl \
+                 https://www.openssl.org/source/openssl-3.1.2.tar.gz \
+                 https://github.com/mozilla/pdf.js/releases/download/v3.10.111/pdfjs-3.10.111-dist.zip"
+MD5SUM_x86_64="c7c881d2d319a04dace962cd6f0d1ae7 \
+               371ebd0103cfa878280c2c615b0f80b8 \
+               6f5f824f3c99fc0a296fce83d13c790b \
+               ee856798545b551c3ac5675007ffa36c \
+               04eafb3f8d5f63ac1735d0a42284bc8e \
+               c94ba8517e8166b2e30f086342e4177a \
+               e53b364b1bb258b6740f416c1df07532 \
+               eb4145d9e5b37be24352e0b1c6f27ddb \
+               2184bdc8b4865f7145b9775a532d31c5 \
+               c8653c10db5900c22054b27a03924988 \
+               3fc7a89530d68d7ea231ebe779c0db9c \
+               00ccdb509d3592cc2163b286177d75c8 \
+               c2388278e7f7c4bb11ae830da5a071cc \
+               daed55d1a288e00c9f311a2ff52f313f \
+               4d6e421811f9057f61344a07257dbc26 \
+               4145fd62be41c39ea8d127e63b171f72 \
+               d47ea986a8945257f0f54e92455d198f \
+               1d7861f969505e67b8677e205afd9ff4 \
+               478a5facb4a90291bf9474e54d144d14"
+REQUIRES="qt6"
 MAINTAINER="Alexander Verbovetsky"
 EMAIL="alik@ejik.org"

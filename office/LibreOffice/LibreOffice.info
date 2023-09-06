@@ -1,10 +1,10 @@
 PRGNAM="LibreOffice"
-VERSION="7.5.4.2"
+VERSION="7.6.0.3"
 HOMEPAGE="https://www.libreoffice.org"
-DOWNLOAD="https://download.documentfoundation.org/libreoffice/src/7.5.4/libreoffice-7.5.4.2.tar.xz \
-		https://sourceforge.net/projects/slackbuildsdirectlinks/files/LibreOffice/libreoffice-7.5.4.2-srcs.tar.xz"
-MD5SUM="da850bcc4306d40e92d713675e6a1014 \
-		ce69908c58e7c4c6c93898c5a118851c"
+DOWNLOAD="https://download.documentfoundation.org/libreoffice/src/7.6.0/libreoffice-7.6.0.3.tar.xz \
+		https://sourceforge.net/projects/slackbuildsdirectlinks/files/LibreOffice/libreoffice-7.6.0.3-srcs.tar.xz"
+MD5SUM="b6994286fa3c274d1beac33aca80c442 \
+		38ed773603b972b45bd6a39b84785157"
 DOWNLOAD_x86_64=""
 MD5SUM_x86_64=""
 REQUIRES="zulu-openjdk11 apache-ant perl-Archive-Zip"
