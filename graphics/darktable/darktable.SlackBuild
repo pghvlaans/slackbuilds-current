@@ -85,6 +85,9 @@ find -L . \
 #export CC=clang
 #export CXX=clang++
 
+# gcc-15 compatibility, via Gentoo
+patch -p1 < $CWD/gcc-15.patch
+
 mkdir -p build
 cd build
   cmake \
