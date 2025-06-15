@@ -1,15 +1,45 @@
-From 70749107b9f2a7078982fecc998f8d96d1cc8f19 Mon Sep 17 00:00:00 2001
-From: Paul Zander <negril.nx@gmail.com>
-Date: Sat, 26 Apr 2025 01:21:08 +0200
-Subject: [PATCH] fix c linkage gcc-15
-
-Bug: https://bugs.gentoo.org/953974
-Signed-off-by: Paul Zander <negril.nx@gmail.com>
-
-diff --git a/src/imageio/format/imageio_format_api.h b/src/imageio/format/imageio_format_api.h
-index 85d4290..8af9c81 100644
---- a/src/imageio/format/imageio_format_api.h
-+++ b/src/imageio/format/imageio_format_api.h
+--- src/common/colorspaces.h.old	2025-06-15 12:30:11.232484562 +0900
++++ src/common/colorspaces.h	2025-06-15 12:30:56.494475146 +0900
+@@ -22,6 +22,8 @@
+ 
+ #include <lcms2.h>
+ 
++G_BEGIN_DECLS
++
+ // this was removed from lcms2 in 2.4
+ #ifndef TYPE_XYZA_FLT
+   #define TYPE_XYZA_FLT (FLOAT_SH(1)|COLORSPACE_SH(PT_XYZ)|EXTRA_SH(1)|CHANNELS_SH(3)|BYTES_SH(4))
+@@ -419,6 +421,8 @@
+                                                                const float whitepoint[2],
+                                                                dt_colormatrix_t RGB_to_XYZ_transposed);
+ 
++G_END_DECLS
++
+ // clang-format off
+ // modelines: These editor modelines have been set for all relevant files by tools/update_modelines.py
+ // vim: shiftwidth=2 expandtab tabstop=2 cindent
+--- src/lua/lua.h.old	2025-06-15 12:28:15.777917047 +0900
++++ src/lua/lua.h	2025-06-15 12:29:17.539297513 +0900
+@@ -27,6 +27,8 @@
+ #include "common/dtpthread.h"
+ #include <glib.h>
+ 
++G_BEGIN_DECLS
++
+ #ifdef USE_LUA
+ #include <lautoc.h>
+ #include <lauxlib.h>
+@@ -97,6 +99,8 @@
+ } dt_lua_state_t;
+ #endif
+ 
++G_END_DECLS
++
+ // clang-format off
+ // modelines: These editor modelines have been set for all relevant files by tools/update_modelines.py
+ // vim: shiftwidth=2 expandtab tabstop=2 cindent
+--- src/imageio/format/imageio_format_api.h.old	2025-06-15 12:33:53.630277557 +0900
++++ src/imageio/format/imageio_format_api.h	2025-06-15 12:35:41.680143609 +0900
 @@ -20,10 +20,6 @@
  
  #ifdef FULL_API_H
@@ -21,7 +51,7 @@ index 85d4290..8af9c81 100644
  #include <stddef.h>
  #include <stdint.h>
  
-@@ -33,6 +29,8 @@ struct dt_dev_pixelpipe_t;
+@@ -33,6 +29,8 @@
  
  #include "common/colorspaces.h" // because forward declaring enums doesn't work in C++ :(
  
@@ -30,7 +60,7 @@ index 85d4290..8af9c81 100644
  /* early definition of modules to do type checking */
  
  #pragma GCC visibility push(default)
-@@ -96,9 +94,7 @@ OPTIONAL(int, read_image, struct dt_imageio_module_data_t *data, uint8_t *out);
+@@ -96,9 +94,7 @@
  
  #pragma GCC visibility pop
  
@@ -41,5 +71,23 @@ index 85d4290..8af9c81 100644
  
  #endif // FULL_API_H
  
--- 
-2.49.0
+--- src/iop/rawdenoise.c.old	2025-06-15 12:41:52.683427928 +0900
++++ src/iop/rawdenoise.c	2025-06-15 12:42:55.833442695 +0900
+@@ -229,7 +229,7 @@
+       const float *const restrict inp = in + (size_t)row * roi->width + offset;
+       const int senselwidth = (roi->width-offset+1)/2;
+       for(int col = 0; col < senselwidth; col++)
+-        fimgp[col] = sqrtf(MAX(0.0f, inp[2*col]));
++        fimgp[col] = sqrtf(fmaxf(0.0f, inp[2*col]));
+     }
+ 
+     // perform the wavelet decomposition and denoising
+@@ -301,7 +301,7 @@
+ 
+ static inline float vstransform(const float value)
+ {
+-  return sqrtf(MAX(0.0f, value));
++  return sqrtf(fmaxf(0.0f, value));
+ }
+ 
+ static void wavelet_denoise_xtrans(const float *const restrict in, float *const restrict out,
